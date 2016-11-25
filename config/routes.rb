@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+
+  get 'sessions/new'
+
   #get 'user/new' --> descomentar?
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,6 +15,10 @@ Rails.application.routes.draw do
   get 'about'   => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   get 'signup'  => 'users#new'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
   resources :users
 
 
