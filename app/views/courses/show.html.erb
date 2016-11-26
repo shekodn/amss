@@ -15,8 +15,12 @@
     <% if !@course.additionalInfo.nil? %>
         <li class="list-group-item"> <b> Additional Information:</b> <%= @course.additionalInfo %>   </li>
     <% end %>
+    <li class="list-group-item">       <%= link_to 'Back', courses_path %>
+   </li>
   </ul>
   <div class="card-block">
-      <%= link_to 'Back', courses_path %>
+      <%= link_to 'Edit', edit_course_path %> |
+      <!-- <%= link_to 'Delete', course_path, method: :delete %> -->
+
   </div>
 </div>

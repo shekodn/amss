@@ -13,7 +13,7 @@ class CoursesController < ApplicationController
     end
 
     def create
-        @course = Course.new(user_params)
+        @course = Course.new(course_params)
         if @course.save
             flash.now[:success] = "Course created"
             redirect_to @course
@@ -22,10 +22,32 @@ class CoursesController < ApplicationController
         end
     end
 
+    def edit
+        @course = Course.find(params[:id])
+    end
+
+    def update
+        @course = Course.find(params[:id])
+
+        if @course.update_attributes(course_params)
+            redirect_to course_path
+
+        else
+            render 'new'
+        end
+    end
+
+    def destroy
+        @course = Course.find(params[:id])
+        flash.now[:success] = "Course destryed"
+        @course.destroy
+        redirect_to course_path
+    end
+
     private
 
-    def user_params
+    def course_params
         params.require(:course).permit(:name,:typeOfEvent, :price, :premiumPrice,
-                :instructor, :additionalInfo, :description, :sizeLimit)
+        :instructor, :additionalInfo, :description, :sizeLimit)
     end
 end
