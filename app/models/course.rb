@@ -6,5 +6,4 @@ class Course < ActiveRecord::Base
      validates :instructor ,presence: true
      validates :sizeLimit ,presence: true
      validates :description ,presence: true
-
 end

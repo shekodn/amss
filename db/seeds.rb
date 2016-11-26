@@ -5,3 +5,25 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Course.create!(name:  "Example Course",
+             instructor: "Maestro",
+             typeOfEvent:              "Seminar",
+             price:              "700",
+             premiumPrice:              "550",
+             sizeLimit:              "25",
+             description:              "Amazing course")
+
+
+20.times do |n|
+  name  = Faker::Name.name
+  instructor = "Maestro-#{n+1}"
+  Course.create!(name:  "Example Course",
+               instructor: instructor,
+               typeOfEvent: "Seminar",
+               price: "700",
+               premiumPrice: "550",
+               sizeLimit: "25",
+               description:"Amazing course")
+end

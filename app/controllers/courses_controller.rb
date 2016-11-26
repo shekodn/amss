@@ -2,6 +2,7 @@ class CoursesController < ApplicationController
 
     def index
         @course = Course.all
+        # @course = Course.paginate(page: params[:page])
     end
 
     def show
@@ -27,7 +28,6 @@ class CoursesController < ApplicationController
     end
 
     def update
-        @course = Course.find(params[:id])
 
         if @course.update_attributes(course_params)
             redirect_to course_path
@@ -38,10 +38,10 @@ class CoursesController < ApplicationController
     end
 
     def destroy
-        @course = Course.find(params[:id])
-        flash.now[:success] = "Course destryed"
-        @course.destroy
-        redirect_to course_path
+        # @course = Course.find(params[:id])
+        # @course.destroy
+        # flash[:success] = "Course deleted"
+        # redirect_to course_path
     end
 
     private
