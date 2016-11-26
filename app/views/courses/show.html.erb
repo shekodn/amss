@@ -19,8 +19,12 @@
         </li>
     </ul>
     <div class="card-block">
-        <%= link_to 'Edit', edit_course_path %> |
-        <%= link_to 'Delete', @course, method: :delete, data: { confirm: "Are you sure?" } %> 
-
+        <% if logged_in? %>
+            <% if current_user.admin? %>
+                <%= link_to 'Edit', edit_course_path %> |
+                <%= link_to 'Delete', @course, method: :delete, data: { confirm: "Are you sure?" } %>
+            </br> </br> </br>
+            <% end %>
+        <% end %>
     </div>
 </div>

@@ -43,7 +43,7 @@ class CoursesController < ApplicationController
 
         @course = Course.find(params[:id])
         @course.destroy
-        # flash[:success] = "Course deleted"
+        flash[:success] = "Course deleted"
         redirect_to root_path
     end
 

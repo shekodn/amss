@@ -1,32 +1,39 @@
 <% provide(:title, 'All Courses') %>
 <h1>All Courses</h1>
 
-
-<% if !Course.all.empty?  %>
-
-    <% @course.each do |course| %>
-
-    <div class="card">
-      <img class="card-img-top" src="http://www.w3schools.com/images/w3schools_green.jpg" alt="Card image cap">
-      <div class="card-block">
-        <h4 class="card-title"><%= course.name %>  </h4>
-        <p class="card-text">  <%= course.description %> </p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"> <b> Instructor: </b> <%= course.instructor %>  </li>
-        <li class="list-group-item"> <b> Price:</b> $ <%= course.price %>  </li>
-        <li class="list-group-item"> <b> Member price:</b> $ <%= course.premiumPrice %>   </li>
-        <li class="list-group-item"> <%= link_to 'More info', course_path(course) %>   </li>
-
-      </ul>
-      <div class="card-block">
-      </div>
-    </div>
+<% if logged_in? %>
+    <% if current_user.admin? %>
+        <%= link_to "Add course", courses_new_path, class: "btn btn-md btn-primary"%>
+    </br> </br> </br>
+    <% end %>
+<% end %>
 
 
+    <% if !Course.all.empty?  %>
+
+        <% @course.each do |course| %>
+
+        <div class="card">
+          <img class="card-img-top" src="http://www.w3schools.com/images/w3schools_green.jpg" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title"><%= course.name %>  </h4>
+            <p class="card-text">  <%= course.description %> </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> <b> Instructor: </b> <%= course.instructor %>  </li>
+            <li class="list-group-item"> <b> Price:</b> $ <%= course.price %>  </li>
+            <li class="list-group-item"> <b> Member price:</b> $ <%= course.premiumPrice %>   </li>
+            <li class="list-group-item"> <%= link_to 'More info', course_path(course) %>   </li>
+
+          </ul>
+          <div class="card-block">
+          </div>
+        </div>
+
+
+
+        <% end %>
+        <% else %>
+            <h2> No hay cursos disponibles por el momento </h2>
 
     <% end %>
-    <% else %>
-        <h2> No hay cursos disponibles por el momento </h2>
-
-<% end %>
