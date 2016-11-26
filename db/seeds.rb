@@ -7,13 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-# Course.create!(name:  "Example Course",
-#              instructor: "Maestro",
-#              typeOfEvent:              "Seminar",
-#              price:              "700",
-#              premiumPrice:              "550",
-#              sizeLimit:              "25",
-#              description:              "Amazing course")
+User.create!(name:  "admin",
+             email: "admin@csoft.com",
+             password:              "123456",
+             password_confirmation: "123456")
+
 
 
 20.times do |n|
