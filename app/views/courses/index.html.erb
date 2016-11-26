@@ -4,6 +4,7 @@
 <% if !Course.all.empty?  %>
 
     <% @course.each do |course| %>
+
         <p> Name: <%= course.name %> </p>
         <p> Instructor: <%= course.instructor %> </p>
         <p> Price: $ <%= course.price %> </p>
