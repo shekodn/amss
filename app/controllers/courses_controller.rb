@@ -26,6 +26,7 @@ class CoursesController < ApplicationController
     private
 
     def user_params
-        params.require(:course).permit(:name, :description)
+        params.require(:course).permit(:name,:typeOfEvent, :price, :premiumPrice,
+                :instructor, :additionalInfo, :description, :sizeLimit)
     end
 end

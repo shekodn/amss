@@ -1,26 +1,36 @@
 <h1>New Course</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@course) do |f| %>
-
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :price %>
-      <%= f.text_field :price, class: 'form-control' %>
-
-      <%= f.label :PremiumPrice %>
-      <%= f.text_field :premiumPrice, class: 'form-control' %>
-
-      <%= f.label :instructor %>
-      <%= f.text_field :instructor, class: 'form-control' %>
-
-      <%= f.label :description %>
-      <%= f.text_area :description, :cols => "10", :rows => "5" %>
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@course) do |f| %>
+        <%= render 'error_messages' %>
 
 
-      <%= f.submit "Create new course", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label :price %>
+        <%= f.text_field :price, class: 'form-control' %>
+
+        <%= f.label :PremiumPrice %>
+        <%= f.text_field :premiumPrice, class: 'form-control' %>
+
+        <%= f.label :instructor %>
+        <%= f.text_field :instructor, class: 'form-control' %>
+
+        <%= f.label :sizeLimit %>
+        <%= f.text_field :sizeLimit, class: 'form-control' %>
+
+        <%= f.label :typeOfEvent %>
+        <%= f.text_field :typeOfEvent, class: 'form-control' %>
+
+        <%= f.label :additionalInfo %>
+        <%= f.text_area :additionalInfo, :cols => "10", :rows => "5" %>
+
+        <%= f.label :description %>
+        <%= f.text_area :description, :cols => "10", :rows => "5" %>
+
+        <%= f.submit "Create new course", class: "btn btn-primary" %>
+        <% end %>
+    </div>
 </div>
