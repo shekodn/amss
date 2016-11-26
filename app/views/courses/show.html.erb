@@ -20,6 +20,7 @@
     </ul>
     <div class="card-block">
         <%= link_to 'Edit', edit_course_path %> |
-        <!-- <%= link_to "Delete", courses_path, method: :delete, data: { confirm: "You sure?" } %> -->
+        <%= link_to 'Delete', @course, method: :delete, data: { confirm: "Are you sure?" } %> 
+
     </div>
 </div>

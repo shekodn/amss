@@ -7,23 +7,27 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-Course.create!(name:  "Example Course",
-             instructor: "Maestro",
-             typeOfEvent:              "Seminar",
-             price:              "700",
-             premiumPrice:              "550",
-             sizeLimit:              "25",
-             description:              "Amazing course")
+# Course.create!(name:  "Example Course",
+#              instructor: "Maestro",
+#              typeOfEvent:              "Seminar",
+#              price:              "700",
+#              premiumPrice:              "550",
+#              sizeLimit:              "25",
+#              description:              "Amazing course")
 
 
 20.times do |n|
-  name  = Faker::Name.name
-  instructor = "Maestro-#{n+1}"
-  Course.create!(name:  "Example Course",
+  name  = Faker::Educator.course
+  instructor = Faker::Name.name
+  description = Faker::Educator.university
+  price = Faker::Commerce.price
+  infor = Faker::Company.buzzword #=> "Business-focused"
+
+  Course.create!(name: name,
                instructor: instructor,
                typeOfEvent: "Seminar",
-               price: "700",
-               premiumPrice: "550",
+               price: price,
+               premiumPrice: price - 10,
                sizeLimit: "25",
-               description:"Amazing course")
+               description:"This course will be take at " + description)
 end

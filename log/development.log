@@ -27225,3 +27225,1907 @@ Processing by StaticPagesController#home as HTML
   Rendered layouts/_header.html.erb (1.3ms)
   Rendered layouts/_footer.html.erb (0.2ms)
 Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 07:53:02 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.6ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 89ms (Views: 87.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 07:53:04 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 94.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses/1/edit" for ::1 at 2016-11-26 07:53:06 -0600
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/courses/1" for ::1 at 2016-11-26 07:53:10 -0600
+Processing by CoursesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"konPkIH19KduOjDuzWji4iEW+mJXr6OUtpy2qybAOu+GK2YTajVDwqzpqneUsTrXVGBHLweKiwHHH+QN8X9roA==", "course"=>{"name"=>"Example Course", "price"=>"750.0", "premiumPrice"=>"550.0", "instructor"=>"Maestro", "sizeLimit"=>"25", "typeOfEvent"=>"Seminar", "description"=>"Amazing course", "additionalInfo"=>""}, "commit"=>"Save", "id"=>"1"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `update_attributes' for nil:NilClass):
+  app/controllers/courses_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (92.3ms)
+
+
+Started PATCH "/courses/1" for ::1 at 2016-11-26 07:54:51 -0600
+
+SyntaxError (/Users/SDN/sdn/TEC/V/AMS/Proyecto/github/amss/app/controllers/courses_controller.rb:57: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/courses_controller.rb:57: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (9.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (97.2ms)
+
+
+Started PATCH "/courses/1" for ::1 at 2016-11-26 07:55:01 -0600
+Processing by CoursesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"konPkIH19KduOjDuzWji4iEW+mJXr6OUtpy2qybAOu+GK2YTajVDwqzpqneUsTrXVGBHLweKiwHHH+QN8X9roA==", "course"=>{"name"=>"Example Course", "price"=>"750.0", "premiumPrice"=>"550.0", "instructor"=>"Maestro", "sizeLimit"=>"25", "typeOfEvent"=>"Seminar", "description"=>"Amazing course", "additionalInfo"=>""}, "commit"=>"Save", "id"=>"1"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `update_attributes' for nil:NilClass):
+  app/controllers/courses_controller.rb:32:in `update'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (7.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (90.0ms)
+
+
+Started PATCH "/courses/1" for ::1 at 2016-11-26 07:56:39 -0600
+Processing by CoursesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"konPkIH19KduOjDuzWji4iEW+mJXr6OUtpy2qybAOu+GK2YTajVDwqzpqneUsTrXVGBHLweKiwHHH+QN8X9roA==", "course"=>{"name"=>"Example Course", "price"=>"750.0", "premiumPrice"=>"550.0", "instructor"=>"Maestro", "sizeLimit"=>"25", "typeOfEvent"=>"Seminar", "description"=>"Amazing course", "additionalInfo"=>""}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "courses" SET "price" = ?, "additionalInfo" = ?, "updated_at" = ? WHERE "courses"."id" = ?  [["price", 750.0], ["additionalInfo", ""], ["updated_at", "2016-11-26 13:56:39.988271"], ["id", 1]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 23ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 07:56:40 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (7.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 121ms (Views: 118.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:56:40 -0600
+
+
+Started GET "/courses/1/edit" for ::1 at 2016-11-26 07:56:44 -0600
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/edit.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 86.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/courses/1" for ::1 at 2016-11-26 07:56:53 -0600
+Processing by CoursesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJ69a86gUkAFtzOKUeK79QxBjxpjF0g8nl+P/KnkBz0oPBToJWDlJcdkqRMIO2PAeTcyVzMyYKnv3N1afltWcg==", "course"=>{"name"=>"Example Course", "price"=>"2000.0", "premiumPrice"=>"550.0", "instructor"=>"Maestro", "sizeLimit"=>"25", "typeOfEvent"=>"Seminar", "description"=>"Amazing course", "additionalInfo"=>""}, "commit"=>"Save", "id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "courses" SET "price" = ?, "updated_at" = ? WHERE "courses"."id" = ?  [["price", 2000.0], ["updated_at", "2016-11-26 13:56:53.199038"], ["id", 1]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 07:56:53 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 07:56:57 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 07:58:28 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 89.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 07:58:28 -0600
+
+
+Started GET "/courses/3" for ::1 at 2016-11-26 07:58:29 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered courses/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/courses" for ::1 at 2016-11-26 07:58:32 -0600
+
+ActionController::RoutingError (No route matches [DELETE] "/courses"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.1.0) lib/puma/configuration.rb:227:in `call'
+  puma (3.1.0) lib/puma/server.rb:561:in `handle_request'
+  puma (3.1.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.1.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.1.0) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (68.2ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 07:58:37 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 95ms (Views: 90.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-11-26 07:58:38 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 71.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-26 07:58:48 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 07:58:49 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 07:58:51 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 84ms (Views: 82.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/" for ::1 at 2016-11-26 07:58:54 -0600
+
+ActionController::RoutingError (No route matches [DELETE] "/"):
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:22:in `middleware_call'
+  web-console (2.0.0.beta3) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.2) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.2) lib/rails/engine.rb:518:in `call'
+  railties (4.2.2) lib/rails/application.rb:164:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  puma (3.1.0) lib/puma/configuration.rb:227:in `call'
+  puma (3.1.0) lib/puma/server.rb:561:in `handle_request'
+  puma (3.1.0) lib/puma/server.rb:406:in `process_client'
+  puma (3.1.0) lib/puma/server.rb:271:in `block in run'
+  puma (3.1.0) lib/puma/thread_pool.rb:111:in `block in spawn_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/routing_error.html.erb within rescues/layout (67.3ms)
+
+
+Started GET "/" for ::1 at 2016-11-26 07:59:05 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-26 08:00:16 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:17 -0600
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:00:18 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 08:00:19 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (206.5ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.1ms)
+
+NameError (undefined local variable or method `course' for #<#<Class:0x007ff79a361b60>:0x007ff7a2000428>
+Did you mean?  @course):
+  app/views/courses/show.html.erb:24:in `_app_views_courses_show_html_erb___1715209533527501083_70350761578120'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (8.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (194.1ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 08:00:20 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (211.1ms)
+Completed 500 Internal Server Error in 232ms (ActiveRecord: 0.2ms)
+
+NameError (undefined local variable or method `course' for #<#<Class:0x007ff79a361b60>:0x007ff7a00a9de0>
+Did you mean?  @course):
+  app/views/courses/show.html.erb:24:in `_app_views_courses_show_html_erb___1715209533527501083_70350709635740'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_source.erb (12.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/_web_console.html.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.0.0.beta3/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (207.8ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 08:00:35 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.5ms)
+
+
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:00:36 -0600
+
+
+Started DELETE "/courses/1" for ::1 at 2016-11-26 08:00:38 -0600
+Processing by CoursesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"59OrYjFGx0qyNecpGX+Y2SDIpJEcrqov/Z44AESDRp7zcQLh2oZwL3DmfbBApkDsVb4Z3EyLgrqMHWqmkzwX0Q==", "id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-11-26 08:00:38 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 81.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:00:40 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 118.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses/2" for ::1 at 2016-11-26 08:00:44 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 73ms (Views: 71.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses/2/edit" for ::1 at 2016-11-26 08:00:46 -0600
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered courses/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/courses/2" for ::1 at 2016-11-26 08:00:50 -0600
+Processing by CoursesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X32C/EjHnyn2lH6VUFQmPgxdFHklLh/TTtnjSt2Nmt5L3yt/owcoTDRH5AwJjf4LeSupNHULN0Y/WrHsCjLLkQ==", "course"=>{"name"=>"ba Course", "price"=>"700.0", "premiumPrice"=>"550.0", "instructor"=>"Maestro", "sizeLimit"=>"25", "typeOfEvent"=>"Seminar", "description"=>"Amazing course", "additionalInfo"=>""}, "commit"=>"Save", "id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "courses" SET "name" = ?, "additionalInfo" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["name", "ba Course"], ["additionalInfo", ""], ["updated_at", "2016-11-26 14:00:50.617118"], ["id", 2]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/courses/2
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/courses/2" for ::1 at 2016-11-26 08:00:50 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered courses/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/courses/2" for ::1 at 2016-11-26 08:00:54 -0600
+Processing by CoursesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RBoNnLrNmarZmwXeRV+BAadvDVTVFjHLvMqdsYdLEilQuKQfUQ0uzxtIn0cchlk00hmwGYUzGV7NSc8XUPRDZg==", "id"=>"2"}
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 2]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2016-11-26 08:00:54 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:00:56 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.6ms)
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:02:42 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (7.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 120ms (Views: 115.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:02:42 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for ::1 at 2016-11-26 08:02:58 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 76.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:02:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Example Course"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:03:44.208872"], ["updated_at", "2016-11-26 14:03:44.208872"]]
+  [1m[35m (263.7ms)[0m  commit transaction
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:03:51 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 81.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:03:51 -0600
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:03:56 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:03:56 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:03:57 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 88ms (Views: 86.8ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Example Course"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.348720"], ["updated_at", "2016-11-26 14:04:18.348720"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Dr. Candice Stoltenberg"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.944049"], ["updated_at", "2016-11-26 14:04:18.944049"]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Carolina Cassin"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.950201"], ["updated_at", "2016-11-26 14:04:18.950201"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Rogelio Schumm"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.954170"], ["updated_at", "2016-11-26 14:04:18.954170"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Clark Fay"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.960040"], ["updated_at", "2016-11-26 14:04:18.960040"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Minerva Macejkovic"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.965350"], ["updated_at", "2016-11-26 14:04:18.965350"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Reed Quigley"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.970675"], ["updated_at", "2016-11-26 14:04:18.970675"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Deonte Reinger"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.976101"], ["updated_at", "2016-11-26 14:04:18.976101"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Aditya Mueller"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.982186"], ["updated_at", "2016-11-26 14:04:18.982186"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Tristin Mitchell"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.987513"], ["updated_at", "2016-11-26 14:04:18.987513"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Elmer Maggio"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.991846"], ["updated_at", "2016-11-26 14:04:18.991846"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Kevin Sipes"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:18.996852"], ["updated_at", "2016-11-26 14:04:18.996852"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Emelia Reichel"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.001794"], ["updated_at", "2016-11-26 14:04:19.001794"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Chelsie Mosciski PhD"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.006252"], ["updated_at", "2016-11-26 14:04:19.006252"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Giles Krajcik"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.012831"], ["updated_at", "2016-11-26 14:04:19.012831"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Dr. Camille Gorczany"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.017565"], ["updated_at", "2016-11-26 14:04:19.017565"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lilyan Johnson V"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.021645"], ["updated_at", "2016-11-26 14:04:19.021645"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Miss Giovanni Kertzmann"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.025851"], ["updated_at", "2016-11-26 14:04:19.025851"]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Noemy O'Conner"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.031921"], ["updated_at", "2016-11-26 14:04:19.031921"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Pascale D'Amore IV"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.037052"], ["updated_at", "2016-11-26 14:04:19.037052"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnifred Gottlieb"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:04:19.041699"], ["updated_at", "2016-11-26 14:04:19.041699"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:04:22 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (7.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 121ms (Views: 115.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:04:22 -0600
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:05:44 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 77ms (Views: 72.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:05:44 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Example Course"], ["instructor", "Maestro"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:49.962885"], ["updated_at", "2016-11-26 14:05:49.962885"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Jakayla Hackett"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.542623"], ["updated_at", "2016-11-26 14:05:50.542623"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Freddy Greenholt"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.547727"], ["updated_at", "2016-11-26 14:05:50.547727"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Dr. Trinity Olson"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.552147"], ["updated_at", "2016-11-26 14:05:50.552147"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Josh Kohler"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.556587"], ["updated_at", "2016-11-26 14:05:50.556587"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Therese Schoen PhD"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.561426"], ["updated_at", "2016-11-26 14:05:50.561426"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Vernice Greenfelder"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.565600"], ["updated_at", "2016-11-26 14:05:50.565600"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Diana Walter"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.570607"], ["updated_at", "2016-11-26 14:05:50.570607"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dalton Moen"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.575405"], ["updated_at", "2016-11-26 14:05:50.575405"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Toney Kuvalis"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.580356"], ["updated_at", "2016-11-26 14:05:50.580356"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Geraldine Greenholt"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.585628"], ["updated_at", "2016-11-26 14:05:50.585628"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Esta Rowe"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.592370"], ["updated_at", "2016-11-26 14:05:50.592370"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kaci Reynolds"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.599283"], ["updated_at", "2016-11-26 14:05:50.599283"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Sean Emmerich DVM"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.605574"], ["updated_at", "2016-11-26 14:05:50.605574"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arnulfo Ernser"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.613570"], ["updated_at", "2016-11-26 14:05:50.613570"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Ronny Johnson"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.620213"], ["updated_at", "2016-11-26 14:05:50.620213"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Patsy Armstrong"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.624418"], ["updated_at", "2016-11-26 14:05:50.624418"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Eduardo Goldner V"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.628912"], ["updated_at", "2016-11-26 14:05:50.628912"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Eda Wehner"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.633705"], ["updated_at", "2016-11-26 14:05:50.633705"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Mrs. Modesta Aufderhar"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.638746"], ["updated_at", "2016-11-26 14:05:50.638746"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vernie Kuhlman"], ["instructor", "Faker::Educator"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "Amazing course"], ["created_at", "2016-11-26 14:05:50.642710"], ["updated_at", "2016-11-26 14:05:50.642710"]]
+  [1m[35m (15.2ms)[0m  commit transaction
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:05:52 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 111ms (Views: 109.1ms | ActiveRecord: 1.0ms)
+
+
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:05:52 -0600
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Communications"], ["instructor", "Gregoria Wolff"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Mallowtown University"], ["created_at", "2016-11-26 14:08:20.267561"], ["updated_at", "2016-11-26 14:08:20.267561"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Psychology"], ["instructor", "Lawrence Zieme"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre College"], ["created_at", "2016-11-26 14:08:20.278255"], ["updated_at", "2016-11-26 14:08:20.278255"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Business"], ["instructor", "Sydni Haley DVM"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Ostbarrow TAFE"], ["created_at", "2016-11-26 14:08:20.282774"], ["updated_at", "2016-11-26 14:08:20.282774"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Commerce"], ["instructor", "Assunta Miller"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre College"], ["created_at", "2016-11-26 14:08:20.288710"], ["updated_at", "2016-11-26 14:08:20.288710"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Education"], ["instructor", "Troy Zemlak"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Ironston TAFE"], ["created_at", "2016-11-26 14:08:20.293265"], ["updated_at", "2016-11-26 14:08:20.293265"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Teaching"], ["instructor", "Lynn Miller"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Iceborough Technical College"], ["created_at", "2016-11-26 14:08:20.297383"], ["updated_at", "2016-11-26 14:08:20.297383"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Medicine"], ["instructor", "Mrs. Steve Miller"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Iceborough College"], ["created_at", "2016-11-26 14:08:20.302235"], ["updated_at", "2016-11-26 14:08:20.302235"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Information Systems"], ["instructor", "Citlalli Maggio"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Mallowtown TAFE"], ["created_at", "2016-11-26 14:08:20.306800"], ["updated_at", "2016-11-26 14:08:20.306800"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Applied Science (Psychology)"], ["instructor", "Rodrigo Ernser"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Mallowtown Technical College"], ["created_at", "2016-11-26 14:08:20.311137"], ["updated_at", "2016-11-26 14:08:20.311137"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Biomedical Science"], ["instructor", "Lionel DuBuque"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake College"], ["created_at", "2016-11-26 14:08:20.315277"], ["updated_at", "2016-11-26 14:08:20.315277"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Information Systems"], ["instructor", "Omari Steuber IV"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Iceborough TAFE"], ["created_at", "2016-11-26 14:08:20.319776"], ["updated_at", "2016-11-26 14:08:20.319776"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Psychology"], ["instructor", "Stuart Ritchie"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre TAFE"], ["created_at", "2016-11-26 14:08:20.323961"], ["updated_at", "2016-11-26 14:08:20.323961"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Design"], ["instructor", "Mr. Jude Farrell"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Iceborough University"], ["created_at", "2016-11-26 14:08:20.328435"], ["updated_at", "2016-11-26 14:08:20.328435"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Commerce"], ["instructor", "Ms. Elias Schimmel"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Ironston TAFE"], ["created_at", "2016-11-26 14:08:20.333307"], ["updated_at", "2016-11-26 14:08:20.333307"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Medicine"], ["instructor", "Imani Kessler"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre Technical College"], ["created_at", "2016-11-26 14:08:20.337397"], ["updated_at", "2016-11-26 14:08:20.337397"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Nursing"], ["instructor", "Gerald Tromp I"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Iceborough Technical College"], ["created_at", "2016-11-26 14:08:20.341940"], ["updated_at", "2016-11-26 14:08:20.341940"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Criminology"], ["instructor", "Melyssa Zieme"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Brookville Technical College"], ["created_at", "2016-11-26 14:08:20.347033"], ["updated_at", "2016-11-26 14:08:20.347033"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Biomedical Science"], ["instructor", "Mina Becker"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Mallowtown TAFE"], ["created_at", "2016-11-26 14:08:20.351650"], ["updated_at", "2016-11-26 14:08:20.351650"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Health Science"], ["instructor", "Edgar Raynor"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake University"], ["created_at", "2016-11-26 14:08:20.356610"], ["updated_at", "2016-11-26 14:08:20.356610"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Communications"], ["instructor", "Dr. Rickey Skiles"], ["typeOfEvent", "Seminar"], ["price", 700.0], ["premiumPrice", 550.0], ["sizeLimit", 25], ["description", "This course will be take at Mallowpond University"], ["created_at", "2016-11-26 14:08:20.360748"], ["updated_at", "2016-11-26 14:08:20.360748"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:08:24 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 86ms (Views: 80.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:08:24 -0600
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Commerce"], ["instructor", "Tyler Lowe"], ["typeOfEvent", "Seminar"], ["price", 43.02], ["premiumPrice", 33.02], ["sizeLimit", 25], ["description", "This course will be take at Bluemeadow University"], ["created_at", "2016-11-26 14:10:19.785621"], ["updated_at", "2016-11-26 14:10:19.785621"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Architectural Technology"], ["instructor", "Jaida Rodriguez"], ["typeOfEvent", "Seminar"], ["price", 25.18], ["premiumPrice", 15.18], ["sizeLimit", 25], ["description", "This course will be take at Clearcourt College"], ["created_at", "2016-11-26 14:10:19.797023"], ["updated_at", "2016-11-26 14:10:19.797023"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Architectural Technology"], ["instructor", "Destinee Windler"], ["typeOfEvent", "Seminar"], ["price", 35.38], ["premiumPrice", 25.380000000000003], ["sizeLimit", 25], ["description", "This course will be take at Ironbarrow TAFE"], ["created_at", "2016-11-26 14:10:19.801347"], ["updated_at", "2016-11-26 14:10:19.801347"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Commerce"], ["instructor", "Dewayne Gottlieb Jr."], ["typeOfEvent", "Seminar"], ["price", 61.71], ["premiumPrice", 51.71], ["sizeLimit", 25], ["description", "This course will be take at Icelyn College"], ["created_at", "2016-11-26 14:10:19.807181"], ["updated_at", "2016-11-26 14:10:19.807181"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Law"], ["instructor", "Marquis Stokes"], ["typeOfEvent", "Seminar"], ["price", 51.09], ["premiumPrice", 41.09], ["sizeLimit", 25], ["description", "This course will be take at Brighthurst TAFE"], ["created_at", "2016-11-26 14:10:19.811890"], ["updated_at", "2016-11-26 14:10:19.811890"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Teaching"], ["instructor", "Cody Kirlin"], ["typeOfEvent", "Seminar"], ["price", 44.75], ["premiumPrice", 34.75], ["sizeLimit", 25], ["description", "This course will be take at Icelyn University"], ["created_at", "2016-11-26 14:10:19.816113"], ["updated_at", "2016-11-26 14:10:19.816113"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Commerce"], ["instructor", "Ettie Wunsch MD"], ["typeOfEvent", "Seminar"], ["price", 48.83], ["premiumPrice", 38.83], ["sizeLimit", 25], ["description", "This course will be take at Brighthurst Technical College"], ["created_at", "2016-11-26 14:10:19.820143"], ["updated_at", "2016-11-26 14:10:19.820143"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Communications"], ["instructor", "Jakayla Towne"], ["typeOfEvent", "Seminar"], ["price", 40.38], ["premiumPrice", 30.380000000000003], ["sizeLimit", 25], ["description", "This course will be take at Icelyn TAFE"], ["created_at", "2016-11-26 14:10:19.824624"], ["updated_at", "2016-11-26 14:10:19.824624"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Computer Science"], ["instructor", "Ms. Branson Langosh"], ["typeOfEvent", "Seminar"], ["price", 64.7], ["premiumPrice", 54.7], ["sizeLimit", 25], ["description", "This course will be take at Vertapple Technical College"], ["created_at", "2016-11-26 14:10:19.829678"], ["updated_at", "2016-11-26 14:10:19.829678"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Psychology"], ["instructor", "Tod Zulauf"], ["typeOfEvent", "Seminar"], ["price", 34.13], ["premiumPrice", 24.130000000000003], ["sizeLimit", 25], ["description", "This course will be take at Bluemeadow Technical College"], ["created_at", "2016-11-26 14:10:19.833948"], ["updated_at", "2016-11-26 14:10:19.833948"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Architectural Technology"], ["instructor", "Remington Koepp"], ["typeOfEvent", "Seminar"], ["price", 26.07], ["premiumPrice", 16.07], ["sizeLimit", 25], ["description", "This course will be take at Vertapple College"], ["created_at", "2016-11-26 14:10:19.838164"], ["updated_at", "2016-11-26 14:10:19.838164"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Criminology"], ["instructor", "Phoebe Cormier"], ["typeOfEvent", "Seminar"], ["price", 20.68], ["premiumPrice", 10.68], ["sizeLimit", 25], ["description", "This course will be take at Icelyn University"], ["created_at", "2016-11-26 14:10:19.842427"], ["updated_at", "2016-11-26 14:10:19.842427"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Information Systems"], ["instructor", "Loren Kassulke"], ["typeOfEvent", "Seminar"], ["price", 96.9], ["premiumPrice", 86.9], ["sizeLimit", 25], ["description", "This course will be take at Clearcourt Technical College"], ["created_at", "2016-11-26 14:10:19.846588"], ["updated_at", "2016-11-26 14:10:19.846588"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Medicine"], ["instructor", "Marcel Schmidt"], ["typeOfEvent", "Seminar"], ["price", 68.51], ["premiumPrice", 58.510000000000005], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake College"], ["created_at", "2016-11-26 14:10:19.851695"], ["updated_at", "2016-11-26 14:10:19.851695"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Biomedical Science"], ["instructor", "Winston Haley"], ["typeOfEvent", "Seminar"], ["price", 32.84], ["premiumPrice", 22.840000000000003], ["sizeLimit", 25], ["description", "This course will be take at Falconholt College"], ["created_at", "2016-11-26 14:10:19.855964"], ["updated_at", "2016-11-26 14:10:19.855964"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Engineering"], ["instructor", "Miss Lloyd Roberts"], ["typeOfEvent", "Seminar"], ["price", 17.93], ["premiumPrice", 7.93], ["sizeLimit", 25], ["description", "This course will be take at Marblewald Technical College"], ["created_at", "2016-11-26 14:10:19.860632"], ["updated_at", "2016-11-26 14:10:19.860632"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Biomedical Science"], ["instructor", "Alysha Wunsch"], ["typeOfEvent", "Seminar"], ["price", 10.23], ["premiumPrice", 0.23000000000000043], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre TAFE"], ["created_at", "2016-11-26 14:10:19.866049"], ["updated_at", "2016-11-26 14:10:19.866049"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Teaching"], ["instructor", "Alek Mills"], ["typeOfEvent", "Seminar"], ["price", 49.45], ["premiumPrice", 39.45], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake University"], ["created_at", "2016-11-26 14:10:19.870586"], ["updated_at", "2016-11-26 14:10:19.870586"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Nursing"], ["instructor", "Hoyt Sanford"], ["typeOfEvent", "Seminar"], ["price", 24.63], ["premiumPrice", 14.629999999999999], ["sizeLimit", 25], ["description", "This course will be take at Mallowpond TAFE"], ["created_at", "2016-11-26 14:10:19.874996"], ["updated_at", "2016-11-26 14:10:19.874996"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Applied Science (Psychology)"], ["instructor", "Mitchel Buckridge IV"], ["typeOfEvent", "Seminar"], ["price", 79.3], ["premiumPrice", 69.3], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake TAFE"], ["created_at", "2016-11-26 14:10:19.879693"], ["updated_at", "2016-11-26 14:10:19.879693"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:10:21 -0600
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "courses"
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/index.html.erb within layouts/application (19.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 125.9ms | ActiveRecord: 2.0ms)
+
+
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:10:21 -0600
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 08:10:32 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 82ms (Views: 80.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 08:12:16 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 101ms (Views: 72.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:12:16 -0600
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20160522152944)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160522152944"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Migrating to AddIndexToUsersEmail (20160523231058)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523231058"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to AddPasswordDigestToUsers (20160523233003)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "password_digest" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160523233003"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to CreateCourses (20161126001749)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "courses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "typeOfEvent" varchar, "price" float, "premiumPrice" float, "name" varchar, "image" varchar, "instructor" varchar, "additionalInfo" text, "sizeLimit" integer, "description" text, "startDate" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161126001749"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Applied Science (Psychology)"], ["instructor", "Haley Glover"], ["typeOfEvent", "Seminar"], ["price", 79.05], ["premiumPrice", 69.05], ["sizeLimit", 25], ["description", "This course will be take at Falconholt Technical College"], ["created_at", "2016-11-26 14:14:51.618999"], ["updated_at", "2016-11-26 14:14:51.618999"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Computer Science"], ["instructor", "Laverne Hoppe"], ["typeOfEvent", "Seminar"], ["price", 15.84], ["premiumPrice", 5.84], ["sizeLimit", 25], ["description", "This course will be take at Falconholt University"], ["created_at", "2016-11-26 14:14:51.629853"], ["updated_at", "2016-11-26 14:14:51.629853"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Law"], ["instructor", "Letha Braun"], ["typeOfEvent", "Seminar"], ["price", 65.08], ["premiumPrice", 55.08], ["sizeLimit", 25], ["description", "This course will be take at Mallowpond University"], ["created_at", "2016-11-26 14:14:51.634546"], ["updated_at", "2016-11-26 14:14:51.634546"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Health Science"], ["instructor", "Mellie Lynch"], ["typeOfEvent", "Seminar"], ["price", 7.72], ["premiumPrice", -2.2800000000000002], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake TAFE"], ["created_at", "2016-11-26 14:14:51.641282"], ["updated_at", "2016-11-26 14:14:51.641282"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Nursing"], ["instructor", "Vickie Watsica MD"], ["typeOfEvent", "Seminar"], ["price", 50.18], ["premiumPrice", 40.18], ["sizeLimit", 25], ["description", "This course will be take at Ironbarrow TAFE"], ["created_at", "2016-11-26 14:14:51.645866"], ["updated_at", "2016-11-26 14:14:51.645866"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Business"], ["instructor", "Lexie Kutch"], ["typeOfEvent", "Seminar"], ["price", 48.99], ["premiumPrice", 38.99], ["sizeLimit", 25], ["description", "This course will be take at Marblewald College"], ["created_at", "2016-11-26 14:14:51.650512"], ["updated_at", "2016-11-26 14:14:51.650512"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Law"], ["instructor", "Mrs. Stephany Sauer"], ["typeOfEvent", "Seminar"], ["price", 22.5], ["premiumPrice", 12.5], ["sizeLimit", 25], ["description", "This course will be take at Ironbarrow TAFE"], ["created_at", "2016-11-26 14:14:51.655061"], ["updated_at", "2016-11-26 14:14:51.655061"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Education"], ["instructor", "Lavinia Pollich"], ["typeOfEvent", "Seminar"], ["price", 56.84], ["premiumPrice", 46.84], ["sizeLimit", 25], ["description", "This course will be take at Marblewald Technical College"], ["created_at", "2016-11-26 14:14:51.659525"], ["updated_at", "2016-11-26 14:14:51.659525"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Nursing"], ["instructor", "Adam Gerlach V"], ["typeOfEvent", "Seminar"], ["price", 19.76], ["premiumPrice", 9.760000000000002], ["sizeLimit", 25], ["description", "This course will be take at Clearcourt University"], ["created_at", "2016-11-26 14:14:51.663681"], ["updated_at", "2016-11-26 14:14:51.663681"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Commerce"], ["instructor", "Sharon Kerluke"], ["typeOfEvent", "Seminar"], ["price", 69.21], ["premiumPrice", 59.209999999999994], ["sizeLimit", 25], ["description", "This course will be take at Marblewald Technical College"], ["created_at", "2016-11-26 14:14:51.667933"], ["updated_at", "2016-11-26 14:14:51.667933"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Criminology"], ["instructor", "Ms. Skye Ward"], ["typeOfEvent", "Seminar"], ["price", 51.26], ["premiumPrice", 41.26], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre Technical College"], ["created_at", "2016-11-26 14:14:51.672642"], ["updated_at", "2016-11-26 14:14:51.672642"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Engineering"], ["instructor", "Ms. Jaleel Wisozk"], ["typeOfEvent", "Seminar"], ["price", 28.01], ["premiumPrice", 18.01], ["sizeLimit", 25], ["description", "This course will be take at Vertapple TAFE"], ["created_at", "2016-11-26 14:14:51.678106"], ["updated_at", "2016-11-26 14:14:51.678106"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Master of Biological Science"], ["instructor", "Dr. Amani Beatty"], ["typeOfEvent", "Seminar"], ["price", 32.29], ["premiumPrice", 22.29], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake TAFE"], ["created_at", "2016-11-26 14:14:51.682344"], ["updated_at", "2016-11-26 14:14:51.682344"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Bachelor of Design"], ["instructor", "Fae Kohler"], ["typeOfEvent", "Seminar"], ["price", 92.57], ["premiumPrice", 82.57], ["sizeLimit", 25], ["description", "This course will be take at Flowerlake College"], ["created_at", "2016-11-26 14:14:51.686976"], ["updated_at", "2016-11-26 14:14:51.686976"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bachelor of Teaching"], ["instructor", "Natalie Spinka"], ["typeOfEvent", "Seminar"], ["price", 10.99], ["premiumPrice", 0.9900000000000002], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre University"], ["created_at", "2016-11-26 14:14:51.691361"], ["updated_at", "2016-11-26 14:14:51.691361"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Applied Science (Psychology)"], ["instructor", "Jessika McDermott MD"], ["typeOfEvent", "Seminar"], ["price", 88.07], ["premiumPrice", 78.07], ["sizeLimit", 25], ["description", "This course will be take at Ostbarrow College"], ["created_at", "2016-11-26 14:14:51.696428"], ["updated_at", "2016-11-26 14:14:51.696428"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Communications"], ["instructor", "Kamryn Gutkowski"], ["typeOfEvent", "Seminar"], ["price", 20.24], ["premiumPrice", 10.239999999999998], ["sizeLimit", 25], ["description", "This course will be take at Bluemeadow University"], ["created_at", "2016-11-26 14:14:51.700883"], ["updated_at", "2016-11-26 14:14:51.700883"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Associate Degree in Computer Science"], ["instructor", "Dimitri Schaden"], ["typeOfEvent", "Seminar"], ["price", 76.92], ["premiumPrice", 66.92], ["sizeLimit", 25], ["description", "This course will be take at Clearcourt Technical College"], ["created_at", "2016-11-26 14:14:51.705323"], ["updated_at", "2016-11-26 14:14:51.705323"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Associate Degree in Teaching"], ["instructor", "Eunice Fahey"], ["typeOfEvent", "Seminar"], ["price", 86.96], ["premiumPrice", 76.96], ["sizeLimit", 25], ["description", "This course will be take at Lakeacre University"], ["created_at", "2016-11-26 14:14:51.710136"], ["updated_at", "2016-11-26 14:14:51.710136"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("name", "instructor", "typeOfEvent", "price", "premiumPrice", "sizeLimit", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Master of Biological Science"], ["instructor", "Helene Renner III"], ["typeOfEvent", "Seminar"], ["price", 32.88], ["premiumPrice", 22.880000000000003], ["sizeLimit", 25], ["description", "This course will be take at Ironston University"], ["created_at", "2016-11-26 14:14:51.714562"], ["updated_at", "2016-11-26 14:14:51.714562"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/courses/1" for ::1 at 2016-11-26 08:14:55 -0600
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered courses/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 88ms (Views: 73.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/courses.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/custom.self-699da4ef7aa63334eaf14ca84220a23f4875cbebabfdbf0434b021b32bedb3f2.css?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/turbolinks.self-c846e670826600e8c91b1a5ada3e6547110d996cd6ff24cde55024f7a135a1b4.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/courses.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/sessions.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-11-26 08:14:55 -0600
+
+
+Started GET "/" for ::1 at 2016-11-26 08:14:57 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-11-26 08:14:59 -0600
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/courses" for ::1 at 2016-11-26 08:15:00 -0600
+Processing by CoursesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "courses"[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.6ms)
