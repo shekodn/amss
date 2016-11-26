@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  typeOfEvent: MyString
+  price: 1
+  premiumPrice: 1.5
+  price: 1.5
+  name: MyString
+  image: MyString
+  instructor: MyString
+  additionalInfo: MyText
+  sizeLimit: 1
+  description: MyText
+  startDate: 2016-11-25
+
+two:
+  typeOfEvent: MyString
+  price: 1
+  premiumPrice: 1.5
+  price: 1.5
+  name: MyString
+  image: MyString
+  instructor: MyString
+  additionalInfo: MyText
+  sizeLimit: 1
+  description: MyText
+  startDate: 2016-11-25
