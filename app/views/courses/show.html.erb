@@ -1,8 +1,22 @@
-<h1>Courses</h1>
+<h1><%= @course.name %></h1>
 
-<p> Name: <%= @course.name %> </p>
-<p> Instructor: <%= @course.instructor %> </p>
-<p> Price: $ <%= @course.price %> </p>
-<p> Member price: <%= @course.premiumPrice %> </p>
-<p> Description: <%= @course.description %> </p>
-</br>
+<div class="card">
+  <img class="card-img-top" src="http://www.w3schools.com/images/w3schools_green.jpg" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title"><%= @course.name %>  </h4>
+    <p class="card-text">  <%= @course.description %> </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <b> Instructor: </b> <%= @course.instructor %>  </li>
+    <li class="list-group-item"> <b> Price:</b> $ <%= @course.price %>  </li>
+    <li class="list-group-item"> <b> Member price:</b> $ <%= @course.premiumPrice %>   </li>
+    <li class="list-group-item"> <b> Type of Event:</b> <%= @course.typeOfEvent %>   </li>
+    <li class="list-group-item"> <b> Size Limit:</b> <%= @course.sizeLimit %>   </li>
+    <% if !@course.additionalInfo.nil? %>
+        <li class="list-group-item"> <b> Additional Information:</b> <%= @course.additionalInfo %>   </li>
+    <% end %>
+  </ul>
+  <div class="card-block">
+      <%= link_to 'Back', courses_path %>
+  </div>
+</div>
