@@ -1,10 +1,17 @@
 <h1>Courses</h1>
 
-<% @course.each do |course| %>
-    <p> Name: <%= course.name %> </p>
-    <p> Instructor: <%= course.instructor %> </p>
-    <p> Price: $ <%= course.price %> </p>
-    <p> Member price: <%= course.premiumPrice %> </p>
-    <p> Description: <%= course.description %> </p>
-    </br>
+
+<% if !Course.all.empty?  %>
+
+    <% @course.each do |course| %>
+        <p> Name: <%= course.name %> </p>
+        <p> Instructor: <%= course.instructor %> </p>
+        <p> Price: $ <%= course.price %> </p>
+        <p> Member price: <%= course.premiumPrice %> </p>
+        <p> Description: <%= course.description %> </p>
+        </br>
+    <% end %>
+    <% else %>
+        <h2> No hay cursos disponibles por el momento </h2>
+
 <% end %>

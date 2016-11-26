@@ -4,7 +4,6 @@ class Course < ActiveRecord::Base
      validates :premiumPrice ,presence: true
      validates :name ,presence: true
      validates :instructor ,presence: true
-     validates :additionalInfo ,presence: true
      validates :sizeLimit ,presence: true
      validates :description ,presence: true
 
